@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="io.busniess.va.addon">
+
+    <uses-permission android:name="${VA_ACCESS_PERMISSION_NAME}"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="VirtualApp Addon"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- release need remove or click start 32's activity -->
+<!--        <activity-alias android:name="com.lody.virtual.MainActivity" android:targetActivity="com.lody.virtual.EmptyActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <action android:name="android.intent.action.LAUNCH_HELPER" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity-alias>-->
+
+        <activity android:name="com.lody.virtual.EmptyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.LAUNCH_HELPER" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

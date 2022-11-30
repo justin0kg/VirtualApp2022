@@ -3,7 +3,7 @@
 
 Virtual App（Multiple Accounts or parallel space）Professional(support Android 4.0 - Android 13)
 
-Inspired by VirtualApp，LBE Parallel Space and MultipleAcccount, this open source project redesigns the Android security sandbox, supports Android 4.0-13.0 versions with dual or multi-opening, and supports Xposed plug-ins
+Inspired by [VirtualApp](https://github.com/asLody/VirtualApp)，[LBE Parallel Space](https://play.google.com/store/apps/details?id=com.lbe.parallel.intl) and [MultipleAcccount](https://play.google.com/store/apps/details?id=com.excelliance.multiaccounts), this open source project redesigns the Android security sandbox, supports Android 4.0-13.0 versions with dual or multi-opening, and supports Xposed plug-ins
 
 Compared with VirtualApp, MultipleAccounts, ParallelSpace, our advantages:
 1. Support Android 4.0 - 13，By the way, we can provide different source codes for different Android versions

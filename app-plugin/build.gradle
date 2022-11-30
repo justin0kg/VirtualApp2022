@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+boolean fullExt = rootProject.ext.VA_FULL_EXT
+
+android {
+    defaultConfig {
+        applicationId rootProject.ext.EXT_PACKAGE_NAME
+        buildConfigField 'String', 'PACKAGE_NAME_MAIN', '"' + rootProject.ext.PACKAGE_NAME + '"'
+        buildConfigField 'boolean', 'fullExt', rootProject.ext.VA_FULL_EXT ? 'true' : 'false'
+        manifestPlaceholders = [
+                VA_ACCESS_PERMISSION_NAME: rootProject.ext.VA_ACCESS_PERMISSION_NAME,
+        ]
+        if (rootProject.ext.VA_MAIN_PACKAGE_32BIT) {
+            ndk.abiFilters = ["arm64-v8a"]
+        } else {
+            ndk.abiFilters = ["armeabi-v7a"]
+        }
+    }
+}
+
+dependencies {
+    implementation project(':lib-ext')
+
+    if (fullExt) {
+        implementation project(':common')
+    }
+}
